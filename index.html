@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="lo">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOJI BUILD — Daily Command</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sarabun:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Header -->
+        <div class="header">
+            <div>
+                <div class="header-title">TOJI <span>BUILD</span></div>
+                <div class="header-sub">DAILY COMMAND CENTER — v1.0</div>
+            </div>
+            <div class="header-right">
+                <div class="today-date" id="todayDate">—</div>
+                <div class="weight-badge">55 <span>KG</span></div>
+                <div style="font-size:11px; color:var(--dim); font-family:var(--font-mono); margin-top:2px;">Last
+                    updated: 8 MAY 2026</div>
+            </div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <div class="nav-tabs" id="navTabs">
+            <button class="nav-tab active" data-tab="tracker">COMMAND CENTER</button>
+            <button class="nav-tab" data-tab="programs">WORKOUT LIBRARY</button>
+        </div>
+
+        <!-- Tracker Page -->
+        <div id="trackerPage" class="page-view active">
+            <!-- Day Selector -->
+            <div class="day-selector" id="daySelector">
+                <button class="day-btn" data-day="0">ຈັນ</button>
+                <button class="day-btn" data-day="1">ອັງຄານ</button>
+                <button class="day-btn" data-day="2">ພຸດ</button>
+                <button class="day-btn" data-day="3">ພະຫັດ</button>
+                <button class="day-btn" data-day="4">ສຸກ</button>
+                <button class="day-btn" data-day="5">ເສົາ 🔥</button>
+                <button class="day-btn" data-day="6">ອາທິດ ⚡</button>
+            </div>
+
+            <!-- Main Grid -->
+            <div id="mainContent"></div>
+        </div>
+
+        <!-- Programs Page -->
+        <div id="programsPage" class="page-view">
+            <!-- Content dynamically rendered by script.js -->
+        </div>
+
+        <div class="footer">
+            <div class="footer-note">DATA STORED LOCALLY — RESETS ON CLEAR</div>
+            <button class="reset-btn" id="resetBtn">RESET DAY</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
