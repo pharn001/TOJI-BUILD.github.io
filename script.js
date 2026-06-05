@@ -11,7 +11,7 @@ const ROUTINES = {
         daily: [
             { id: 'sunscreen_face', text: 'ທາກັນແດດໜ້າ (SPF)', tag: 'care' },
             { id: 'sunscreen_body', text: 'ທາກັນແດດຕົວ', tag: 'care' },
-            { id: 'meal1', text: 'ຄາບ 1 — ໂອດມີນເຊົ້າ + ໂປຣຕີນ (~500 kcal, ~27g)', tag: 'nutrition' },
+            { id: 'meal1', text: 'ຄາບ 1 — ໂອດມີນເຊົ້າ + ໂປຣຕີນ (~560 kcal, ~47g)', tag: 'nutrition' },
             { id: 'meal2', text: 'ຄາບ 2 — ກາງເວັນ (~500 kcal, ~27g)', tag: 'nutrition' },
             { id: 'pre_workout', text: 'ກຽມອຸປະກອນ / ວໍມອັບ 10 ນາທີ', tag: null },
             { id: 'workout', text: 'ຝຶກໜັກຕາມໂປຣແກຣມ (ເບິ່ງດ້ານລຸ່ມ)', tag: null },
@@ -61,7 +61,7 @@ const ROUTINES = {
         daily: [
             { id: 'sunscreen_face', text: 'ທາກັນແດດໜ້າ (SPF)', tag: 'care' },
             { id: 'sunscreen_body', text: 'ທາກັນແດດຕົວ', tag: 'care' },
-            { id: 'meal1', text: 'ຄາບ 1 — ໂອດມີນເຊົ້າ + ໂປຣຕີນ (~500 kcal, ~27g)', tag: 'nutrition' },
+            { id: 'meal1', text: 'ຄາບ 1 — ໂອດມີນເຊົ້າ + ໂປຣຕີນ (~560 kcal, ~47g)', tag: 'nutrition' },
             { id: 'meal2', text: 'ຄາບ 2 — ກາງເວັນ (~500 kcal, ~27g)', tag: 'nutrition' },
             { id: 'walk', text: 'ຍ່າງ / ກິດຈະກຳເບົາ (Active Recovery)', tag: null },
             { id: 'meal3', text: 'ຄາບ 3 — ຕອນບ່າຍ (~500 kcal, ~27g)', tag: 'nutrition' },
@@ -75,7 +75,7 @@ const ROUTINES = {
         daily: [
             { id: 'sunscreen_face', text: 'ທາກັນແດດໜ້າ (SPF)', tag: 'care' },
             { id: 'sunscreen_body', text: 'ທາກັນແດດຕົວ', tag: 'care' },
-            { id: 'meal1', text: 'ຄາບ 1 — ໂອດມີນເຊົ້າ + ໂປຣຕີນ (~500 kcal, ~27g)', tag: 'nutrition' },
+            { id: 'meal1', text: 'ຄາບ 1 — ໂອດມີນເຊົ້າ + ໂປຣຕີນ (~560 kcal, ~47g)', tag: 'nutrition' },
             { id: 'meal2', text: 'ຄາບ 2 — ກາງເວັນ (~500 kcal, ~27g)', tag: 'nutrition' },
             { id: 'meal3', text: 'ຄາບ 3 — ຕອນບ່າຍ (~500 kcal, ~27g)', tag: 'nutrition' },
             { id: 'meal4', text: 'ຄາບ 4 — ຕອນແລງ (~500 kcal, ~27g)', tag: 'nutrition' },
@@ -114,7 +114,7 @@ const EXERCISE_DETAILS = {
         target: 'ກ້າມຊີ້ນປີກ (Lats), ກ້າມຊີ້ນສະບັກ (Teres Major/Rhomboids)',
         tips: [
             'ຈັບບາກວ້າງກວ່າບ່າເລັກນ້ອຍ ຄວ້ຳມື',
-            'ດຶງຕົວຂຶ້ນໃຫ້ໜ້າເອິກເຂົ້າໃກ້ບາທີ່ສຸດ (ໂຟກັດບີບຫຼັງ)',
+            'ดຶງຕົວຂຶ້ນໃຫ້ໜ້າເອິກເຂົ້າໃກ້ບາທີ່ສຸດ (ໂຟກັດບີບຫຼັງ)',
             'ຜ່ອນຕົວລົງຈົນແຂນຢຽດເກືອບຕຶງເພື່ອຢືດກ້າມຊີ້ນສູງສຸດ'
         ],
         focus: 'ເພີ່ມຄວາມແຂງແຮງແລະຄວາມກວ້າງລວມຂອງຫຼັງ'
@@ -149,11 +149,11 @@ const EXERCISE_DETAILS = {
         image: 'image/barbell_row.png',
         target: 'ຫຼັງສ່ວນເທິງ, ຫຼັງສ່ວນກາງ, ປີກ, ແລະຫຼັງສ່ວນລຸ່ມ (Lower Back)',
         tips: [
-            'ຢືນກົ້ມຕົວເຮັດມຸມ 45-90 ອົງສາ ເກັງໜ້າທ້ອງແລະຫຼັງລຸ່ມເພື່ອຊັບພອດສະໂພກ',
+            'ຢືນກົ້ມຕົວເຮັດມຸມ 45-90 ອົງສາ ເກັງໜ້າທ້ອງແລະຫຼັງລຸ່ມเพื่อຊັບພອດສະໂພກ',
             'ດຶງບາເບລເຂົ້າຫາແອວ/ໜ້າທ້ອງສ່ວນລຸ່ມ ລຳຕົວນິ້ງບໍ່ຂຍັບຂະຫຍົ່ມຕົວ',
             'ຄວບຄຸມຟອມຕະຫຼອດເຊັດ ບໍ່ໃຊ້ແຮງຫວ່ຽງຈາກເຂົ່າ'
         ],
-        focus: 'ຄວາມໜາແໜ້ນແລະພະລະກຳລັງຂອງຫຼັງໂດຍລວມ'
+        focus: 'ความໜາແໜ້ນແລະພະລະກຳລັງຂອງຫຼັງໂດຍລວມ'
     },
     onearm_row: {
         name: 'One-arm DB Row',
@@ -165,7 +165,7 @@ const EXERCISE_DETAILS = {
             'ດຶງດຳເບລຂຶ້ນຕາມແນວສະຫຼຽງໄປທາງສະໂພກ ບີບສອກຊິດລຳຕົວ',
             'ໂຟກັດທີ່ການຂຍັບຂໍ້ສອກຂຶ້ນແລະລົງ ບໍ່ບິດແອວຫຼືຕົວໂຍກ'
         ],
-        focus: 'ສ້າງຄວາມສົມດຸນຂອງກ້າມຊີ້ນຫຼັງຊ້າຍແລະຂວາ'
+        focus: 'ສ້າງຄວາມສົມດຸນຂອງກ້າມຊີ້ນຫຼັງຊ້າຍແລະຂວา'
     },
     neutral_row: {
         name: 'Neutral Grip Row',
@@ -183,7 +183,7 @@ const EXERCISE_DETAILS = {
         name: 'Incline Chest Press (30-40°)',
         sets: '3×10',
         image: 'image/incline_press.png',
-        target: 'ເອິກສ່ວນເທິງ (Upper Chest), ໄຫຼ່ໜ້າ',
+        target: 'ເອິກສ່ວນເທິງ (Upper Chest), ໄຫຼ່ໜ้า',
         tips: [
             'ປັບເບາະອຽງຂຶ້ນ 30-40 ອົງສາ (ບໍ່ເກີນ 45 ອົງສາເພື່ອບໍ່ໃຫ້ຫົວໄຫຼ່ເຮັດວຽກຫຼາຍເກີນໄປ)',
             'ກົດບ່າແລະສະບັກລົງຕິດເບາະ ດັນດຳເບລຫຼືບາຂຶ້ນຊື່ໆ ເທິງເອິກເທິງ',
@@ -221,7 +221,7 @@ const EXERCISE_DETAILS = {
         image: 'image/shoulder_press.png',
         target: 'ຫົວໄຫຼ່ດ້ານໜ້າ (Anterior Deltoid) ແລະຫົວໄຫຼ່ດ້ານຂ້າງ',
         tips: [
-            'ນັ່ງຫຼັງຊື່ແນບເບາະ ຖືດຳເບລລະດັບໃບຫູ ຂໍ້ສອກຕັ້ງສາກ 90 ອົງສາ',
+            'ນັ່ງຫຼັງຊື່ແນບເບາะ ຖືດຳເບລລະດັບໃບຫູ ຂໍ້ສອກຕັ້ງສາກ 90 ອົງສາ',
             'ດັນດຳເບລຂຶ້ນຊື່ໆ ເທິງຫົວໃຫ້ແຂນຢຽດເກືອບຕຶງ',
             'ຄ່ອຍໆ ຜ່ອນດຳເບລລົງມາຊ້າໆ ໃນທ່າກຽມແລະດັນຂຶ້ນຕໍ່ທັນທີ'
         ],
@@ -231,10 +231,10 @@ const EXERCISE_DETAILS = {
         name: 'Pistol Squat Practice',
         sets: '3×5/leg',
         image: 'image/pistol.png',
-        target: 'ຕົ້ນຂາໜ້າ (Quadriceps), ກົ້ນ (Glutes), ແກນກາງຕົວ, ຂໍ້ຕີນ',
+        target: 'ຕົ້ນຂาໜ້າ (Quadriceps), ກົ້ນ (Glutes), ແກນກາງຕົວ, ຂໍ້ຕີນ',
         tips: [
-            'ຢືນຂາດຽວ ຢືນແຂນແລະຂາອີກຂ້າງໄປທາງໜ້າເພື່ອຖ່ວງດຸນນ້ຳໜັກ',
-            'ຄ່ອຍໆ ຍໍ້ສະໂພກລົງເລິກຄືນັ່ງຢອງຂາດຽວຢ່າງຄວບຄຸມ',
+            'ຢືນຂາດຽו ຢືນແຂນແລະຂາອີກຂ້າງໄປທາງໜ້າເພື່ອຖ່ວງດຸນນ້ຳໜັກ',
+            'ຄ່ອຍໆ ຍໍ້ສະໂພກລົງເລິກຄືນັ່ງຢອງຂາດຽוຢ່າງຄວບຄຸມ',
             'ຫາກຊົງຕົວຍາກ ໃຫ້ໃຊ້ມືແຕະເກາະເສົາຫຼືໃຊ້ອຸປະກອນປະຄອງຕົວ'
         ],
         focus: 'ເສີມສ້າງຄວາມແຂງແຮງແລະຄວາມຢືດຢຸ່ນຂອງຂາເທື່ອລະຂ້າງ'
@@ -245,8 +245,8 @@ const EXERCISE_DETAILS = {
         image: 'image/lsit.png',
         target: 'ກ້າມຊີ້ນໜ້າທ້ອງ (Core), ຕົ້ນຂາດ້ານໜ້າ, ຂໍ້ສອກและຫົວໄຫຼ່',
         tips: [
-            'ວາງມືເທິງບາຄູ່ຫຼືເທິງພື້ນ ດັນຕົວຂຶ້ນເກັ່ງບ່າໃຫ້ຫ່າງຈາກໃບຫູ',
-            'ຍົກຂາທັງສອງຂ້າງຂຶ້ນຊື່ຂະໜານກັບພື້ນເຮັດມຸມ 90 ອົງສາກັບລຳຕົວ',
+            'ວາງມືເທິງບາຄູ່ຫຼືເທິງພື້ນ ດັນຕົວຂຶ້ນເກັ່ງບ່າໃຫ້ຫ່າງຈາກໃบຫູ',
+            'ຍົກຂາທັງສອງຂ້າງຂຶ້ນຊື່ຂະໜານກັບພື້ນເຮັດມຸມ 90 ອົງສາກับລຳຕົວ',
             'ເກັ່ງໜ້າທ້ອງ ລັອກເຂົ່າຕຶງ ແລະຮັກສາທ່າທາງຄ້າງໄວ້ໃຫ້ນານທີ່ສຸດ'
         ],
         focus: 'ພັດທະນາຄວາມແຂງແຮງແກນກາງຕົວແບບ Isometric'
@@ -379,10 +379,13 @@ ${SKILLS.map(s => `
 }
 
 function updateMacroProgress(day) {
-    const mealIds = ['meal1', 'meal2', 'meal3', 'meal4'];
-    const done = mealIds.filter(id => isDone(day, id)).length;
-    const kcal = done * 500;
-    const prot = done * 27;
+    let kcal = 0;
+    let prot = 0;
+    if (isDone(day, 'meal1')) { kcal += 560; prot += 47; }
+    if (isDone(day, 'meal2')) { kcal += 500; prot += 27; }
+    if (isDone(day, 'meal3')) { kcal += 500; prot += 27; }
+    if (isDone(day, 'meal4')) { kcal += 500; prot += 27; }
+    
     const kcalPct = Math.min(100, (kcal / 2000) * 100);
     const protPct = Math.min(100, (prot / 110) * 100);
 
@@ -485,7 +488,7 @@ function renderProgramsPage() {
                         ` : ''}
                         <div class="workout-card-details">
                             <div class="detail-section">
-                                <div class="detail-label">TARGET MUSCLES / ກ້າມຊີ້ນເເປົ້າໝາຍ</div>
+                                <div class="detail-label">TARGET MUSCLES / ກ້າມຊີ້ນເປົ້າໝາຍ</div>
                                 <div class="detail-val">${details.target}</div>
                             </div>
                             <div class="detail-section">
@@ -503,13 +506,20 @@ function renderProgramsPage() {
                 </div>
             `;
 
-            card.addEventListener('click', () => {
+            card.addEventListener('click', (e) => {
+                e.stopPropagation();
                 const isExpanded = card.classList.contains('expanded');
                 // Collapse all other cards first
                 document.querySelectorAll('.workout-card').forEach(c => {
                     if (c !== card) c.classList.remove('expanded');
                 });
                 card.classList.toggle('expanded', !isExpanded);
+                // Scroll expanded card into view on mobile
+                if (!isExpanded) {
+                    setTimeout(() => {
+                        card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }, 100);
+                }
             });
 
             grid.appendChild(card);
@@ -535,6 +545,171 @@ function renderProgramsPage() {
     container.appendChild(wrap);
     
     renderWorkoutGrid();
+}
+
+// Render Nutrition Recipe page
+function renderNutritionPage() {
+    const container = document.getElementById('nutritionPage');
+    container.innerHTML = '';
+
+    const wrap = document.createElement('div');
+    wrap.className = 'nutrition-container';
+
+    wrap.innerHTML = `
+        <div style="font-family:var(--font-display);font-size:28px;letter-spacing:4px;color:var(--bright);margin-bottom:8px;">
+            🥣 NUTRITION — OATS + PROTEIN + OLIVE OIL
+        </div>
+        <div style="font-family:var(--font-mono);font-size:11px;color:var(--dim);margin-bottom:28px;letter-spacing:1px;">
+            DAILY FUEL FOR CODING & TRAINING — RECIPE v1.0
+        </div>
+
+        <!-- Ingredients Table -->
+        <div class="nutrition-card">
+            <div class="nutrition-card-header">
+                <span class="nutrition-card-icon">📋</span>
+                <span class="nutrition-card-title">ສ່ວນຜສມທີ່ແນະນຳ (ຕໍ່ 1 ມື້)</span>
+                <span class="nutrition-card-badge">~560 KCAL</span>
+            </div>
+            <div class="nutrition-card-body">
+                <table class="ingredient-table">
+                    <thead>
+                        <tr>
+                            <th>ວັດຖຸດິບ</th>
+                            <th>ປະລິມານ</th>
+                            <th>ພະລັງງານ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="ingredient-name">Oats (Quaker Instant)</div>
+                                <div class="ingredient-sub">ຂ້າວໂອ໊ດ</div>
+                            </td>
+                            <td>70 ກຣັມ (~2 ສະກູ໊ບ)</td>
+                            <td class="kcal-val">~260 kcal</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="ingredient-name">Whey / Plant Protein</div>
+                                <div class="ingredient-sub">ໂປຣຕີນ</div>
+                            </td>
+                            <td>1.5 ສະກູ໊ບ (~45-48 ກຣັມ)</td>
+                            <td class="kcal-val">~180 kcal</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="ingredient-name">Extra Virgin Olive Oil</div>
+                                <div class="ingredient-sub">ນ້ຳມັນມະກອກ (EVOO)</div>
+                            </td>
+                            <td>1 ບ່ວງໂຕະ (15 ມລ.)</td>
+                            <td class="kcal-val">~120 kcal</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="ingredient-name">Water / Almond Milk</div>
+                                <div class="ingredient-sub">ນ້ຳເປົ່າ ຫຼື ນົມອາມັນ</div>
+                            </td>
+                            <td>200 – 250 ມລ.</td>
+                            <td class="kcal-val">—</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="macro-summary-strip">
+                    <div class="macro-chip"><span class="macro-dot kcal-dot"></span>~560 kcal</div>
+                    <div class="macro-chip"><span class="macro-dot prot-dot"></span>~47g Protein</div>
+                    <div class="macro-chip"><span class="macro-dot fat-dot"></span>~22g Healthy Fat</div>
+                    <div class="macro-chip"><span class="macro-dot carb-dot"></span>~51g Carbs</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Method Cards -->
+        <div class="method-grid">
+            <div class="nutrition-card method-card">
+                <div class="method-badge quick">⚡ QUICK MIX</div>
+                <div class="method-title">ແບບຊົງດື່ມທັນທີ</div>
+                <div class="method-subtitle">ເໝາະກັບຊ່ວງເຊົ້າທີ່ຮີບໄປເຮັດວຽກ (08:00 ນ.)</div>
+                <ol class="method-steps">
+                    <li>
+                        <span class="step-num">1</span>
+                        <span>ໃສ່ <strong>ຂ້າວໂອ໊ດ</strong> ແລະ <strong>ໂປຣຕີນ</strong> ລົງໃນແກ້ວເຊັກ</span>
+                    </li>
+                    <li>
+                        <span class="step-num">2</span>
+                        <span>ເຕີມ <strong>ນ້ຳເຢັນ</strong> ຫຼື ນ້ຳອຸນຫະພູມຫ້ອງ</span>
+                    </li>
+                    <li>
+                        <span class="step-num">3</span>
+                        <span>ໃສ່ <strong>ນ້ຳມັນມະກອກ</strong> ເປັນລຳດັບສຸດທ້າຍ</span>
+                    </li>
+                    <li>
+                        <span class="step-num">4</span>
+                        <span>ເຂົ້າໃຫ້ເຂົ້າກັນ ແລ້ວ <strong>ດື່ມທັນທີ</strong> (Instant ຈະນິ່ມໄວ)</span>
+                    </li>
+                </ol>
+                <div class="method-time">⏱ ~2 ນາທີ</div>
+            </div>
+
+            <div class="nutrition-card method-card">
+                <div class="method-badge overnight">🌙 OVERNIGHT</div>
+                <div class="method-title">ແບບຄ້າງຄືນ (Overnight Oats)</div>
+                <div class="method-subtitle">ເນື້ອສຳຜັດນຸ່ມແລະອ່ອນກວ່າ — ຄືພຸດດິ້ງ</div>
+                <ol class="method-steps">
+                    <li>
+                        <span class="step-num">1</span>
+                        <span>ຜສົມສ່ວນປະສົມທັງໝົດລົງໃນ <strong>ໂຖແກ້ວ</strong> ທີ່ມີຝາປິດ</span>
+                    </li>
+                    <li>
+                        <span class="step-num">2</span>
+                        <span>ຄົນໃຫ້ເຂົ້າກັນ ແລ້ວ <strong>ແຊ່ຕູ້ເຢັນ</strong> ຖິ້ມໄວ້ 1 ຄືນ</span>
+                    </li>
+                    <li>
+                        <span class="step-num">3</span>
+                        <span>ຕອນເຊົ້ານຳມາທານ — ເນື້ອໂອ໊ດຈະ <strong>ນຸ່ມຄືພຸດດິ້ງ</strong></span>
+                    </li>
+                </ol>
+                <div class="method-time">⏱ Prep ~3 ນາທີ + ແຊ່ 6-8 ຊມ.</div>
+            </div>
+        </div>
+
+        <!-- Tips Section -->
+        <div class="nutrition-card tips-card">
+            <div class="nutrition-card-header">
+                <span class="nutrition-card-icon">💡</span>
+                <span class="nutrition-card-title">ຂໍ້ແນະນຳການກິນ</span>
+            </div>
+            <div class="nutrition-card-body">
+                <div class="tip-grid">
+                    <div class="tip-item">
+                        <div class="tip-icon">⏰</div>
+                        <div class="tip-label">ຊ່ວງເວລາ</div>
+                        <div class="tip-text">ທານເປັນ <strong>ມື້ເຊົ້າ (M1)</strong> ເພື່ອໃຫ້ໄດ້ພະລັງງານຄົງທີ່ ແລະ ບຳລຸງສະໝອງສຳລັບການຂຽນໂຄ້ດທັງວัน</div>
+                    </div>
+                    <div class="tip-item">
+                        <div class="tip-icon">🥄</div>
+                        <div class="tip-label">Texture</div>
+                        <div class="tip-text">ຫາກຮູ້ສຶກດື່ມຍາກ ໃຫ້ <strong>ລົດນ້ຳລົງ</strong> ໃຫ້ເປັນເນື້ອຂົ້ນແບບໂຈ໊ກ ແລ້ວໃຊ້ບ່ວງຕັກທານແທນ</div>
+                    </div>
+                    <div class="tip-item">
+                        <div class="tip-icon">🍫</div>
+                        <div class="tip-label">ລົດຊາດ</div>
+                        <div class="tip-text">EVOO ມີກິ່ນຫອມຈາງໆ ຖ້າຜສົມກັບ <strong>ໂປຣຕີນລົດຊ໋ອກໂກແລັດ</strong> ຈະເຂົ້າກັນໄດ້ດີຫຼາຍ</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Info Callout -->
+        <div class="nutrition-callout">
+            <div class="callout-icon">ℹ️</div>
+            <div class="callout-content">
+                <div class="callout-title">ການປັບປ່ຽນ</div>
+                <div class="callout-text">ຫາກວັນໃດຕ້ອງການພະລັງງານເພີ່ມ (ເຊັ່ນ ວັນທີ່ມີເທຣນນິ່ງໜັກ) ສາມາດ <strong>ເພີ່ມຂ້າວໂອ໊ດເປັນ 80-90 ກຣັມ</strong> ຫຼືໃສ່ <strong>ຖົ່ວເພີ່ມເຕີມ</strong> ໄດ້ຕາມຄວາມເໝາະສົມ</div>
+            </div>
+        </div>
+    `;
+
+    container.appendChild(wrap);
 }
 
 // ─── INIT ─────────────────────────────────────────────────────────────────────
@@ -580,25 +755,33 @@ document.getElementById('resetBtn').addEventListener('click', () => {
 const navTabs = document.querySelectorAll('.nav-tab');
 const trackerPage = document.getElementById('trackerPage');
 const programsPage = document.getElementById('programsPage');
+const nutritionPage = document.getElementById('nutritionPage');
 const resetBtn = document.getElementById('resetBtn');
+
+const allPages = [trackerPage, programsPage, nutritionPage];
+
+function showPage(pageName) {
+    allPages.forEach(p => p.classList.remove('active'));
+    resetBtn.style.display = 'none';
+
+    if (pageName === 'tracker') {
+        trackerPage.classList.add('active');
+        resetBtn.style.display = 'block';
+        renderMain(currentDay);
+    } else if (pageName === 'programs') {
+        programsPage.classList.add('active');
+        renderProgramsPage();
+    } else if (pageName === 'nutrition') {
+        nutritionPage.classList.add('active');
+        renderNutritionPage();
+    }
+}
 
 navTabs.forEach(tab => {
     tab.addEventListener('click', () => {
         navTabs.forEach(t => t.classList.remove('active'));
         tab.classList.add('active');
-        
-        const target = tab.dataset.tab;
-        if (target === 'tracker') {
-            trackerPage.classList.add('active');
-            programsPage.classList.remove('active');
-            resetBtn.style.display = 'block';
-            renderMain(currentDay);
-        } else if (target === 'programs') {
-            trackerPage.classList.remove('active');
-            programsPage.classList.add('active');
-            resetBtn.style.display = 'none';
-            renderProgramsPage();
-        }
+        showPage(tab.dataset.tab);
     });
 });
 
