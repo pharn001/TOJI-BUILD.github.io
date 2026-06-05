@@ -832,23 +832,62 @@ body::before {
 .workout-card-content {
     max-height: 0;
     opacity: 0;
-    transition: max-height 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+    transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
     border-top: 1px solid transparent;
     padding: 0 20px;
+    overflow: hidden;
 }
 
 .workout-card.expanded .workout-card-content {
-    max-height: 500px;
+    max-height: 900px;
     opacity: 1;
-    padding: 16px 20px 20px 20px;
+    padding: 20px;
     border-top: 1px solid var(--border);
 }
 
-.detail-section {
-    margin-bottom: 12px;
+.workout-card-inner {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
 }
 
-.detail-section:last-child {
+.workout-card-image-wrap {
+    flex: 1;
+    min-width: 240px;
+    max-width: 280px;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.workout-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.workout-card:hover .workout-card-image {
+    opacity: 1;
+    transform: scale(1.03);
+}
+
+.workout-card-details {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.detail-section {
     margin-bottom: 0;
 }
 
@@ -858,7 +897,7 @@ body::before {
     letter-spacing: 2px;
     color: var(--dim);
     text-transform: uppercase;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
 }
 
 .detail-val {
@@ -871,7 +910,7 @@ body::before {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
     margin-top: 4px;
 }
 
@@ -879,7 +918,7 @@ body::before {
     font-size: 13px;
     color: var(--text);
     position: relative;
-    padding-left: 16px;
+    padding-left: 18px;
     line-height: 1.5;
 }
 
@@ -889,4 +928,20 @@ body::before {
     left: 0;
     color: var(--accent);
     font-size: 12px;
+}
+
+/* Mobile responsive for workout cards */
+@media (max-width: 680px) {
+    .workout-card-inner {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .workout-card-image-wrap {
+        max-width: 100%;
+        min-width: 100%;
+        aspect-ratio: 16/10;
+    }
+    .workout-card.expanded .workout-card-content {
+        max-height: 1200px;
+    }
 }

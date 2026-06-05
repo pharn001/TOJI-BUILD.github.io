@@ -98,6 +98,7 @@ const EXERCISE_DETAILS = {
     lat_pulldown: {
         name: 'Lat Pulldown',
         sets: '3×12',
+        image: 'image/lat_pulldown.png',
         target: 'ກ້າມຊີ້ນປີກ (Latissimus Dorsi), ຫຼັງສ່ວນເທິງ',
         tips: [
             'ເອນຕົວໄປທາງຫຼັງເລັກນ້ອຍ (ປະມານ 10-15 ອົງສາ)',
@@ -109,6 +110,7 @@ const EXERCISE_DETAILS = {
     pullups: {
         name: 'Pull-ups',
         sets: '3×12',
+        image: 'image/pullups.png',
         target: 'ກ້າມຊີ້ນປີກ (Lats), ກ້າມຊີ້ນສະບັກ (Teres Major/Rhomboids)',
         tips: [
             'ຈັບບາກວ້າງກວ່າບ່າເລັກນ້ອຍ ຄວ້ຳມື',
@@ -120,6 +122,7 @@ const EXERCISE_DETAILS = {
     tbar_row: {
         name: 'T-bar Row',
         sets: '3×10',
+        image: 'image/tbar_row.png',
         target: 'ຫຼັງສ່ວນເທິງ (Upper Back), ກ້າມຊີ້ນສະບັກ, ປີກ',
         tips: [
             'ຢືນຄ່ອມບາ ຍໍ້ເຂົ່າເລັກນ້ອຍ ພັບສະໂພກເກັງແກນກາງຕົວໃຫ້ໝັ້ນຄົງ',
@@ -131,6 +134,7 @@ const EXERCISE_DETAILS = {
     cable_row: {
         name: 'Cable Row',
         sets: '3×10',
+        image: 'image/cable_row.png',
         target: 'ຫຼັງສ່ວນກາງ (Mid Back), ສະບັກ, ປີກ',
         tips: [
             'ນັ່ງຫຼັງຊື່ ຢືດເອິກຂຶ້ນ ຢືນແຂນໄປໃຫ້ສຸດ',
@@ -142,6 +146,7 @@ const EXERCISE_DETAILS = {
     barbell_row: {
         name: 'Barbell Row (45-90°)',
         sets: '3×10',
+        image: 'image/barbell_row.png',
         target: 'ຫຼັງສ່ວນເທິງ, ຫຼັງສ່ວນກາງ, ປີກ, ແລະຫຼັງສ່ວນລຸ່ມ (Lower Back)',
         tips: [
             'ຢືນກົ້ມຕົວເຮັດມຸມ 45-90 ອົງສາ ເກັງໜ້າທ້ອງແລະຫຼັງລຸ່ມເພື່ອຊັບພອດສະໂພກ',
@@ -153,10 +158,11 @@ const EXERCISE_DETAILS = {
     onearm_row: {
         name: 'One-arm DB Row',
         sets: '3×12',
+        image: 'image/onearm_row.png',
         target: 'ປີກສ່ວນລຸ່ມ (Lower Lats), ຫຼັງສ່ວນກາງ',
         tips: [
             'ວາງເຂົ່າແລະມືໜຶ່ງຂ້າງເທິງເບາະ ອີກຂ້າງຖືດຳເບລປ່ອຍລົງຊື່ໆ',
-            'ດຶງດຳເບລຂຶ້ນຕາມແנວສະຫຼຽງໄປທາງສະໂພກ ບີບສອກຊິດລຳຕົວ',
+            'ດຶງດຳເບລຂຶ້ນຕາມແນວສະຫຼຽງໄປທາງສະໂພກ ບີບສອກຊິດລຳຕົວ',
             'ໂຟກັດທີ່ການຂຍັບຂໍ້ສອກຂຶ້ນແລະລົງ ບໍ່ບິດແອວຫຼືຕົວໂຍກ'
         ],
         focus: 'ສ້າງຄວາມສົມດຸນຂອງກ້າມຊີ້ນຫຼັງຊ້າຍແລະຂວາ'
@@ -164,6 +170,7 @@ const EXERCISE_DETAILS = {
     neutral_row: {
         name: 'Neutral Grip Row',
         sets: '3×12',
+        image: 'image/neutral_row.png',
         target: 'ຫຼັງສ່ວນກາງ, ປີກ, ຫຼັງແຂນສ່ວນເທິງ',
         tips: [
             'ໃຊ້ດອກຈັບແບບປິ່ນຝາມືເຂົ້າຫາກັນ (Neutral Grip)',
@@ -175,6 +182,7 @@ const EXERCISE_DETAILS = {
     incline_press: {
         name: 'Incline Chest Press (30-40°)',
         sets: '3×10',
+        image: 'image/incline_press.png',
         target: 'ເອິກສ່ວນເທິງ (Upper Chest), ໄຫຼ່ໜ້າ',
         tips: [
             'ປັບເບາະອຽງຂຶ້ນ 30-40 ອົງສາ (ບໍ່ເກີນ 45 ອົງສາເພື່ອບໍ່ໃຫ້ຫົວໄຫຼ່ເຮັດວຽກຫຼາຍເກີນໄປ)',
@@ -186,6 +194,7 @@ const EXERCISE_DETAILS = {
     flys: {
         name: 'Chest Flys',
         sets: '3×12',
+        image: 'image/flys.png',
         target: 'ເອິກສ່ວນກາງແລະຂອບເອິກດ້ານໃນ (Inner/Middle Chest)',
         tips: [
             'ນອນຮາບກັບເບາະ ຖືດຳເບລຂຶ້ນ ງໍ້ຂໍ້ສອກເລັກນ້ອຍແລະລັອກຂໍ້ສອກໄວ້ຄົງທີ່',
@@ -197,6 +206,7 @@ const EXERCISE_DETAILS = {
     dips: {
         name: 'Dips',
         sets: '3×max',
+        image: 'image/dips.png',
         target: 'ເອິກສ່ວນລຸ່ມ (Lower Chest), ຫຼັງແຂນ (Triceps), ໄຫຼ່ໜ້າ',
         tips: [
             'ຈັບບາຄູ່ ໂນ້ມຕົວໄປທາງໜ້າເລັກນ້ອຍ (ເພື່ອປ່ຽນໂຟກັດໄປທີ່ເອິກສ່ວນລຸ່ມແທນຫຼັງແຂນ)',
@@ -208,6 +218,7 @@ const EXERCISE_DETAILS = {
     shoulder_press: {
         name: 'Shoulder Press',
         sets: '3×10',
+        image: 'image/shoulder_press.png',
         target: 'ຫົວໄຫຼ່ດ້ານໜ້າ (Anterior Deltoid) ແລະຫົວໄຫຼ່ດ້ານຂ້າງ',
         tips: [
             'ນັ່ງຫຼັງຊື່ແນບເບາະ ຖືດຳເບລລະດັບໃບຫູ ຂໍ້ສອກຕັ້ງສາກ 90 ອົງສາ',
@@ -219,6 +230,7 @@ const EXERCISE_DETAILS = {
     pistol: {
         name: 'Pistol Squat Practice',
         sets: '3×5/leg',
+        image: 'image/pistol.png',
         target: 'ຕົ້ນຂາໜ້າ (Quadriceps), ກົ້ນ (Glutes), ແກນກາງຕົວ, ຂໍ້ຕີນ',
         tips: [
             'ຢືນຂາດຽວ ຢືນແຂນແລະຂາອີກຂ້າງໄປທາງໜ້າເພື່ອຖ່ວງດຸນນ້ຳໜັກ',
@@ -230,7 +242,8 @@ const EXERCISE_DETAILS = {
     lsit: {
         name: 'L-sit Hold',
         sets: '3×max',
-        target: 'ກ້າມຊີ້ນໜ້າທ້ອງ (Core), ຕົ້ນຂາດ້ານໜ້າ, ຂໍ້ສອກແລະຫົວໄຫຼ່',
+        image: 'image/lsit.png',
+        target: 'ກ້າມຊີ້ນໜ້າທ້ອງ (Core), ຕົ້ນຂາດ້ານໜ້າ, ຂໍ້ສອກและຫົວໄຫຼ່',
         tips: [
             'ວາງມືເທິງບາຄູ່ຫຼືເທິງພື້ນ ດັນຕົວຂຶ້ນເກັ່ງບ່າໃຫ້ຫ່າງຈາກໃບຫູ',
             'ຍົກຂາທັງສອງຂ້າງຂຶ້ນຊື່ຂະໜານກັບພື້ນເຮັດມຸມ 90 ອົງສາກັບລຳຕົວ',
@@ -241,6 +254,7 @@ const EXERCISE_DETAILS = {
     muscleup_drills: {
         name: 'Muscle-up Drills',
         sets: '3×5',
+        image: 'image/muscleup_drills.png',
         target: 'ປີກ, ສະບັກ, ໜ້າເອິກ, ຫຼັງແຂນ, ຂໍ້ສອກ',
         tips: [
             'ຊ້ອມທ່າດຶງຂໍ້ແບບລະເບີດພະລັງ (Explosive Pull-ups) ໃຫ້ບາແຕະໜ້າເອິກຫຼືແອວ',
@@ -463,19 +477,28 @@ function renderProgramsPage() {
                     <div class="workout-card-arrow">▼</div>
                 </div>
                 <div class="workout-card-content">
-                    <div class="detail-section">
-                        <div class="detail-label">TARGET MUSCLES / ກ້າມຊີ້ນເເປົ້າໝາຍ</div>
-                        <div class="detail-val">${details.target}</div>
-                    </div>
-                    <div class="detail-section">
-                        <div class="detail-label">FOCUS AREA / ຈຸດເນັ້ນຢ້ຳ</div>
-                        <div class="detail-val">${details.focus}</div>
-                    </div>
-                    <div class="detail-section">
-                        <div class="detail-label">TRAINING TIPS / ຄຳແນະນຳການຝຶກ</div>
-                        <ul class="tips-list">
-                            ${details.tips.map(tip => `<li>${tip}</li>`).join('')}
-                        </ul>
+                    <div class="workout-card-inner">
+                        ${details.image ? `
+                        <div class="workout-card-image-wrap">
+                            <img class="workout-card-image" src="${details.image}" alt="${ex.name}">
+                        </div>
+                        ` : ''}
+                        <div class="workout-card-details">
+                            <div class="detail-section">
+                                <div class="detail-label">TARGET MUSCLES / ກ້າມຊີ້ນເເປົ້າໝາຍ</div>
+                                <div class="detail-val">${details.target}</div>
+                            </div>
+                            <div class="detail-section">
+                                <div class="detail-label">FOCUS AREA / ຈຸດເນັ້ນຢ້ຳ</div>
+                                <div class="detail-val">${details.focus}</div>
+                            </div>
+                            <div class="detail-section">
+                                <div class="detail-label">TRAINING TIPS / ຄຳແນະນຳການຝຶກ</div>
+                                <ul class="tips-list">
+                                    ${details.tips.map(tip => `<li>${tip}</li>`).join('')}
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             `;
