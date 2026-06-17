@@ -971,9 +971,6 @@ body::before {
     overflow: hidden;
     position: relative;
     animation: fadeUp 0.4s ease both;
-    display: flex;
-    flex-direction: column;
-    min-height: max-content;
 }
 
 .workout-card:nth-child(1) { animation-delay: 0.05s; }
