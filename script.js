@@ -192,9 +192,9 @@ const EXERCISE_DETAILS = {
         focus: 'ສ້າງເນື້ອເອິກສ່ວນເທິງໃຫ້ເບິ່ງເຕັມແລະຊັດເຈນ'
     },
     flys: {
-        name: 'Chest Flys',
+        name: 'Cable Standing Fly',
         sets: '3×12',
-        image: 'image/flys.png',
+        image: 'image/cable-standing-fly.png',
         target: 'ເອິກສ່ວນກາງແລະຂອບເອິກດ້ານໃນ (Inner/Middle Chest)',
         tips: [
             'ນອນຮາບກັບເບາະ ຖືດຳເບລຂຶ້ນ ງໍ້ຂໍ້ສອກເລັກນ້ອຍແລະລັອກຂໍ້ສອກໄວ້ຄົງທີ່',
@@ -385,7 +385,7 @@ function updateMacroProgress(day) {
     if (isDone(day, 'meal2')) { kcal += 500; prot += 27; }
     if (isDone(day, 'meal3')) { kcal += 500; prot += 27; }
     if (isDone(day, 'meal4')) { kcal += 500; prot += 27; }
-    
+
     const kcalPct = Math.min(100, (kcal / 2000) * 100);
     const protPct = Math.min(100, (prot / 110) * 100);
 
@@ -445,7 +445,7 @@ function renderProgramsPage() {
     // Filter tabs container
     const filterContainer = document.createElement('div');
     filterContainer.className = 'category-tabs';
-    
+
     const categories = [
         { key: 'all', label: 'ALL' },
         { key: 'pull', label: 'PULL / BACK' },
@@ -546,7 +546,7 @@ function renderProgramsPage() {
 
     wrap.appendChild(filterContainer);
     container.appendChild(wrap);
-    
+
     renderWorkoutGrid();
 }
 
