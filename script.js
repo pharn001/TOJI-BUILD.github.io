@@ -409,24 +409,53 @@ function renderProgramsPage() {
     const wrap = document.createElement('div');
     wrap.className = 'programs-container';
 
-    // Title
+    // Glass title
     const title = document.createElement('div');
-    title.style.cssText = 'font-family:var(--font-display);font-size:28px;letter-spacing:4px;color:var(--bright);margin-bottom:12px;';
-    title.textContent = 'WORKOUT LIBRARY — ແນະນຳທ່າຝຶກ';
+    title.className = 'page-title-glass';
+    title.innerHTML = 'WORKOUT <span class="title-accent">LIBRARY</span>';
     wrap.appendChild(title);
+
+    const subtitle = document.createElement('div');
+    subtitle.className = 'page-subtitle-glass';
+    subtitle.textContent = 'ແນະນຳທ່າຝຶກ — EXERCISE GUIDE v1.0';
+    wrap.appendChild(subtitle);
+
+    // Pre-calculate counts per category
+    const allExercisesRaw = [];
+    ROUTINES.training.exercises.forEach(cat => {
+        const isPull = cat.cat.includes('PULL');
+        const isPush = cat.cat.includes('PUSH');
+        const isSkill = cat.cat.includes('SKILL');
+        let filterGroup = '';
+        if (isPull) filterGroup = 'pull';
+        else if (isPush) filterGroup = 'push';
+        else if (isSkill) filterGroup = 'skills';
+        cat.items.forEach(item => {
+            allExercisesRaw.push({ id: item.id, name: item.name, sets: item.sets, group: filterGroup, catLabel: cat.cat });
+        });
+    });
+
+    const counts = {
+        all: allExercisesRaw.length,
+        pull: allExercisesRaw.filter(e => e.group === 'pull').length,
+        push: allExercisesRaw.filter(e => e.group === 'push').length,
+        skills: allExercisesRaw.filter(e => e.group === 'skills').length
+    };
 
     // Filter tabs container
     const filterContainer = document.createElement('div');
     filterContainer.className = 'category-tabs';
     
     const categories = [
-        { key: 'all', label: 'ທັງໝົດ (ALL)' },
-        { key: 'pull', label: 'ດຶງ / ຫຼັງ (PULL / BACK)' },
-        { key: 'push', label: 'ດັນ / ເອິກ & ໄຫຼ່ (PUSH / CHEST)' },
-        { key: 'skills', label: 'ຝຶກທັກສະ (SKILLS)' }
+        { key: 'all', label: 'ALL' },
+        { key: 'pull', label: 'PULL / BACK' },
+        { key: 'push', label: 'PUSH / CHEST' },
+        { key: 'skills', label: 'SKILLS' }
     ];
 
     let activeFilter = 'all';
+
+    const chevronSVG = `<svg width="12" height="12" viewBox="0 0 12 12" fill="none" style="display:block"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 
     function renderWorkoutGrid() {
         const existingGrid = wrap.querySelector('.workout-grid');
@@ -435,31 +464,7 @@ function renderProgramsPage() {
         const grid = document.createElement('div');
         grid.className = 'workout-grid';
 
-        const allExercises = [];
-        
-        // Populate and group from training routine exercises
-        ROUTINES.training.exercises.forEach(cat => {
-            const isPull = cat.cat.includes('PULL');
-            const isPush = cat.cat.includes('PUSH');
-            const isSkill = cat.cat.includes('SKILL');
-            
-            let filterGroup = '';
-            if (isPull) filterGroup = 'pull';
-            else if (isPush) filterGroup = 'push';
-            else if (isSkill) filterGroup = 'skills';
-
-            cat.items.forEach(item => {
-                allExercises.push({
-                    id: item.id,
-                    name: item.name,
-                    sets: item.sets,
-                    group: filterGroup,
-                    catLabel: cat.cat
-                });
-            });
-        });
-
-        const filtered = allExercises.filter(ex => activeFilter === 'all' || ex.group === activeFilter);
+        const filtered = allExercisesRaw.filter(ex => activeFilter === 'all' || ex.group === activeFilter);
 
         filtered.forEach(ex => {
             const details = EXERCISE_DETAILS[ex.id] || {
@@ -477,7 +482,7 @@ function renderProgramsPage() {
                         <div class="workout-card-subtitle">${ex.catLabel}</div>
                     </div>
                     <div class="workout-card-sets">${ex.sets}</div>
-                    <div class="workout-card-arrow">▼</div>
+                    <div class="workout-card-arrow">${chevronSVG}</div>
                 </div>
                 <div class="workout-card-content">
                     <div class="workout-card-inner">
@@ -509,12 +514,10 @@ function renderProgramsPage() {
             card.addEventListener('click', (e) => {
                 e.stopPropagation();
                 const isExpanded = card.classList.contains('expanded');
-                // Collapse all other cards first
                 document.querySelectorAll('.workout-card').forEach(c => {
                     if (c !== card) c.classList.remove('expanded');
                 });
                 card.classList.toggle('expanded', !isExpanded);
-                // Scroll expanded card into view on mobile
                 if (!isExpanded) {
                     setTimeout(() => {
                         card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -531,7 +534,7 @@ function renderProgramsPage() {
     categories.forEach(cat => {
         const btn = document.createElement('button');
         btn.className = 'category-tab' + (cat.key === activeFilter ? ' active' : '');
-        btn.textContent = cat.label;
+        btn.innerHTML = `${cat.label}<span class="tab-count">${counts[cat.key]}</span>`;
         btn.addEventListener('click', () => {
             filterContainer.querySelectorAll('.category-tab').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
@@ -556,18 +559,18 @@ function renderNutritionPage() {
     wrap.className = 'nutrition-container';
 
     wrap.innerHTML = `
-        <div style="font-family:var(--font-display);font-size:28px;letter-spacing:4px;color:var(--bright);margin-bottom:8px;">
-            🥣 NUTRITION — OATS + PROTEIN + OLIVE OIL
+        <div class="page-title-glass">
+            🥣 MASS GAINER <span class="title-accent">SHAKE</span>
         </div>
-        <div style="font-family:var(--font-mono);font-size:11px;color:var(--dim);margin-bottom:28px;letter-spacing:1px;">
-            DAILY FUEL FOR CODING & TRAINING — RECIPE v1.0
+        <div class="page-subtitle-glass">
+            OATS + PROTEIN + OLIVE OIL — DAILY FUEL FOR CODING & TRAINING
         </div>
 
         <!-- Ingredients Table -->
         <div class="nutrition-card">
             <div class="nutrition-card-header">
                 <span class="nutrition-card-icon">📋</span>
-                <span class="nutrition-card-title">ສ່ວນຜສມທີ່ແນະນຳ (ຕໍ່ 1 ມື້)</span>
+                <span class="nutrition-card-title">ສ່ວນຜສົມທີ່ແນະນຳ (ຕໍ່ 1 ມື້)</span>
                 <span class="nutrition-card-badge">~560 KCAL</span>
             </div>
             <div class="nutrition-card-body">
@@ -687,7 +690,7 @@ function renderNutritionPage() {
                     </div>
                     <div class="tip-item">
                         <div class="tip-icon">🥄</div>
-                        <div class="tip-label">Texture</div>
+                        <div class="tip-label">TEXTURE</div>
                         <div class="tip-text">ຫາກຮູ້ສຶກດື່ມຍາກ ໃຫ້ <strong>ລົດນ້ຳລົງ</strong> ໃຫ້ເປັນເນື້ອຂົ້ນແບບໂຈ໊ກ ແລ້ວໃຊ້ບ່ວງຕັກທານແທນ</div>
                     </div>
                     <div class="tip-item">
@@ -699,9 +702,9 @@ function renderNutritionPage() {
             </div>
         </div>
 
-        <!-- Info Callout -->
+        <!-- Warning Callout -->
         <div class="nutrition-callout">
-            <div class="callout-icon">ℹ️</div>
+            <div class="callout-icon">⚠️</div>
             <div class="callout-content">
                 <div class="callout-title">ການປັບປ່ຽນ</div>
                 <div class="callout-text">ຫາກວັນໃດຕ້ອງການພະລັງງານເພີ່ມ (ເຊັ່ນ ວັນທີ່ມີເທຣນນິ່ງໜັກ) ສາມາດ <strong>ເພີ່ມຂ້າວໂອ໊ດເປັນ 80-90 ກຣັມ</strong> ຫຼືໃສ່ <strong>ຖົ່ວເພີ່ມເຕີມ</strong> ໄດ້ຕາມຄວາມເໝາະສົມ</div>
@@ -753,6 +756,7 @@ document.getElementById('resetBtn').addEventListener('click', () => {
 
 // Setup tab routing
 const navTabs = document.querySelectorAll('.nav-tab');
+const bottomNavItems = document.querySelectorAll('.bottom-nav-item');
 const trackerPage = document.getElementById('trackerPage');
 const programsPage = document.getElementById('programsPage');
 const nutritionPage = document.getElementById('nutritionPage');
@@ -763,6 +767,14 @@ const allPages = [trackerPage, programsPage, nutritionPage];
 function showPage(pageName) {
     allPages.forEach(p => p.classList.remove('active'));
     resetBtn.style.display = 'none';
+
+    // Sync both navigations
+    navTabs.forEach(t => {
+        t.classList.toggle('active', t.dataset.tab === pageName);
+    });
+    bottomNavItems.forEach(b => {
+        b.classList.toggle('active', b.dataset.tab === pageName);
+    });
 
     if (pageName === 'tracker') {
         trackerPage.classList.add('active');
@@ -775,13 +787,22 @@ function showPage(pageName) {
         nutritionPage.classList.add('active');
         renderNutritionPage();
     }
+
+    // Scroll to top on page switch
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+// Top nav tabs
 navTabs.forEach(tab => {
     tab.addEventListener('click', () => {
-        navTabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
         showPage(tab.dataset.tab);
+    });
+});
+
+// Bottom nav items
+bottomNavItems.forEach(item => {
+    item.addEventListener('click', () => {
+        showPage(item.dataset.tab);
     });
 });
 
