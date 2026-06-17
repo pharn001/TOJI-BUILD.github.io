@@ -466,6 +466,15 @@ function renderProgramsPage() {
 
         const filtered = allExercisesRaw.filter(ex => activeFilter === 'all' || ex.group === activeFilter);
 
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
+
         filtered.forEach(ex => {
             const details = EXERCISE_DETAILS[ex.id] || {
                 target: 'ກ້າມຊີ້ນສະເພາະສ່ວນ',
@@ -526,6 +535,7 @@ function renderProgramsPage() {
             });
 
             grid.appendChild(card);
+            observer.observe(card);
         });
 
         wrap.appendChild(grid);
