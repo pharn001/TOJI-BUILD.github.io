@@ -971,6 +971,9 @@ body::before {
     overflow: hidden;
     position: relative;
     animation: fadeUp 0.4s ease both;
+    display: flex;
+    flex-direction: column;
+    min-height: max-content;
 }
 
 .workout-card:nth-child(1) { animation-delay: 0.05s; }
@@ -1037,6 +1040,7 @@ body::before {
     color: var(--bright);
     letter-spacing: 0.3px;
     transition: color 0.2s;
+    line-height: 1.4;
 }
 
 @media (hover: hover) {
@@ -1056,6 +1060,7 @@ body::before {
     align-items: center;
     gap: 5px;
     width: fit-content;
+    line-height: 1.2;
 }
 
 .workout-card-subtitle::before {
@@ -1081,6 +1086,10 @@ body::before {
     letter-spacing: 0.5px;
     flex-shrink: 0;
     transition: all 0.2s;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (hover: hover) {
