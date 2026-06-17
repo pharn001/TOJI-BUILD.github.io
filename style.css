@@ -916,11 +916,13 @@ body::before {
     gap: 8px;
 }
 
-.category-tab:hover {
-    border-color: rgba(64, 216, 200, 0.4);
-    color: #40d8c8;
-    background: rgba(64, 216, 200, 0.08);
-    transform: translateY(-1px);
+@media (hover: hover) {
+    .category-tab:hover {
+        border-color: rgba(64, 216, 200, 0.4);
+        color: #40d8c8;
+        background: rgba(64, 216, 200, 0.08);
+        transform: translateY(-1px);
+    }
 }
 
 .category-tab.active {
@@ -979,11 +981,13 @@ body::before {
 .workout-card:nth-child(6) { animation-delay: 0.20s; }
 .workout-card:nth-child(7) { animation-delay: 0.23s; }
 
-.workout-card:hover {
-    border-color: rgba(240, 192, 64, 0.35);
-    background: rgba(255, 255, 255, 0.05);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 24px rgba(240, 192, 64, 0.06);
+@media (hover: hover) {
+    .workout-card:hover {
+        border-color: rgba(240, 192, 64, 0.35);
+        background: rgba(255, 255, 255, 0.05);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 24px rgba(240, 192, 64, 0.06);
+    }
 }
 
 /* Gold gradient top line on hover */
@@ -1000,9 +1004,14 @@ body::before {
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.workout-card:hover::before,
 .workout-card.expanded::before {
     transform: scaleX(1);
+}
+
+@media (hover: hover) {
+    .workout-card:hover::before {
+        transform: scaleX(1);
+    }
 }
 
 /* Card Header */
@@ -1030,8 +1039,10 @@ body::before {
     transition: color 0.2s;
 }
 
-.workout-card:hover .workout-card-title {
-    color: #fff;
+@media (hover: hover) {
+    .workout-card:hover .workout-card-title {
+        color: #fff;
+    }
 }
 
 /* Category tag — teal gradient pill */
@@ -1072,9 +1083,11 @@ body::before {
     transition: all 0.2s;
 }
 
-.workout-card:hover .workout-card-sets {
-    background: rgba(240, 192, 64, 0.12);
-    border-color: rgba(240, 192, 64, 0.3);
+@media (hover: hover) {
+    .workout-card:hover .workout-card-sets {
+        background: rgba(240, 192, 64, 0.12);
+        border-color: rgba(240, 192, 64, 0.3);
+    }
 }
 
 /* Chevron arrow */
@@ -1149,9 +1162,11 @@ body::before {
     transition: opacity 0.3s ease, transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.workout-card:hover .workout-card-image {
-    opacity: 1;
-    transform: scale(1.05);
+@media (hover: hover) {
+    .workout-card:hover .workout-card-image {
+        opacity: 1;
+        transform: scale(1.05);
+    }
 }
 
 /* Details section */

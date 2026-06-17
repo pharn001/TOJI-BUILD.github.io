@@ -521,7 +521,7 @@ function renderProgramsPage() {
                 if (!isExpanded) {
                     setTimeout(() => {
                         card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                    }, 100);
+                    }, 350);
                 }
             });
 
